@@ -75,10 +75,12 @@ My journey as a Software Engineer and AI Researcher has prepared me to take on c
     </div>
 
 <ol>
-<li>A presenter at the 2023 IEEE Network Virtualization Conference hosted in Germany.</li>
-<li>A first-class graduate of computer engineering.</li>
+<li>An author and a presenter at the 2023 IEEE Network Virtualization Conference hosted in Germany.</li>
+<li>A first-class graduate in computer engineering.</li>
 <li>A former awardee of the NAWA postgraduate scholarship in Poland</li>
-<li>An holder of the postgraduate research scholarship at the Atlantic Technological University, Ireland.</li>
+<li>A recipient of the postgraduate research scholarship at the Atlantic Technological University, Ireland.</li>
+<li>One of the 10 winners of the Samson Abioye Essay Writing Scholarship in 2018 - Nigeria</li>
+<li>A recipient of the Abdulkabir Aliu Foundation Scholarship for undergraduate students - Nigeria</li>
 </ol>
 
 </div>
