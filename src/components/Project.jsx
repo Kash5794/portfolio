@@ -39,8 +39,8 @@ const Project = () => {
     <div className='project-image'>
    
     <div className='description'>
-    <h5><a href=''>
-    A Real-time Chat Application - development mode</a></h5>
+    <h5><a href='https://catchya-fdd29e2cbbba.herokuapp.com/'>
+    CatchYa:A Chat Application</a></h5>
     <img src={chatApp1} className='image-size'/>
       <h6>Features' description</h6>
       
