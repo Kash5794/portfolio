@@ -1,11 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import image from '../images/profile.jpg'
+import ml from '../images/ML.png'
+import web from '../images/web.png'
+import aics1 from '../images/aics1.jpg'
+import ernact from '../images/ernact.jpg'
+import ernact2 from '../images/ernact2.jpg'
+import nfv from '../images/nfv.png'
+
 import {Link} from 'react-router-dom';
 import { useGlobalContext } from '../Context';
 import {FiCornerUpRight} from 'react-icons/fi'
 import {FiCornerRightDown} from 'react-icons/fi'
 import {ImPointRight} from 'react-icons/im'
+import { BarChart } from '@mui/x-charts/BarChart';
+import { BarPlot } from '@mui/x-charts/BarChart';
 
+
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { ChartContainer } from '@mui/x-charts/ChartContainer';
+import { ResponsiveChartContainer } from '@mui/x-charts/ResponsiveChartContainer';
+
+import { LinePlot, MarkPlot } from '@mui/x-charts/LineChart';
+import { ChartsXAxis } from '@mui/x-charts/ChartsXAxis';
+import { ChartsYAxis } from '@mui/x-charts/ChartsYAxis';
 
 const Section = () => {
   const {handleContactClick}= useGlobalContext()
@@ -32,80 +52,153 @@ setInterval(()=>{
     <img src={image} alt='profile'/>
     <div >
     <h4  style={{fontSize:'20px'}}>Software Engineer/AI Researcher</h4>
-    <div className='button-container d-flex justify-content-end'>
-    {hand && <ImPointRight size={30} color='white'/>}
-    <Link  to='/project'>
-      <button className='btnn'> 
-      My Projects </button>
-   </Link>
     
+    </div>
+    
+    </div>
+
+  <div className='introduction'>
+  
+    <h5 className='p-2'>Projects</h5>
    
-    </div>
-    </div>
+
+  <div className='technology-stack-container'>
+  <Link to='/machine'>
+     
+    <div className='technology-stack-image-container'><img src={ml} alt='machine learning'/>
+    <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}} >
     
+      <h5>Machine Learning</h5>
+      </div>
     </div>
-
-  <div className='introduction font-size'>
-  <div className='text-white d-flex'>
-    <h5 className='p-2' style={{background:'#383913'}}>Introduction</h5>
+    </Link>
+    <Link  to='/web'>
+    <div className='technology-stack-image-container'><img src={web} alt='web development'/>
+    <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}} >
+    <h5>Web Development</h5>
     </div>
-
-  <p className='mb-4 mw-100' >
-  <FiCornerUpRight size={30} color='white'/>
-  I am a passionate Software Engineer and AI Researcher with a solid background in full-stack web development, 
-  utilizing technologies like React.js, Node.js, Python, SQL, and MongoDB. 
-  My journey into the world of technology has been marked by a deep-seated curiosity and a relentless pursuit of innovative solutions.
-  </p>
-  <p className='mb-4 mw-100'>
-  Concurrently as a final year research student, I am dedicating my efforts to pioneering a groundbreaking solution for the detection of Advanced Persistent Threat (APT) attacks in wireless networks. 
-  In my quest to fortify network security, I harness the power of AI frameworks, such as Graph Neural Networks, Reinforcement Learning, 
-  and Network Pruning. These cutting-edge technologies enable me to develop intelligent systems capable of identifying and mitigating cyber threats effectively.
-
-  </p>
-
-  <p className='mb-4 mw-100'>
-  I am now actively seeking a role as a full-stack developer, where I can not only apply my hands-on experience in web development but also leverage my expertise in artificial intelligence to create dynamic and intelligent web applications. 
-My journey as a Software Engineer and AI Researcher has prepared me to take on challenges, solve complex problems, and contribute to the development of innovative and secure web solutions.
-  </p>
-
-<div>
-<div className='text-white d-flex'>
-    <h5 className='p-2' style={{background:'#383913'}}>Achievement</h5>
-    <FiCornerRightDown size={30} color='white'/>
     </div>
+    </Link>
+  </div>
 
-<ol>
-<li>An author and a presenter at the 2023 IEEE Network Virtualization Conference hosted in Germany.</li>
-<li>A first-class graduate in computer engineering.</li>
-<li>A former awardee of the NAWA postgraduate scholarship in Poland</li>
-<li>A recipient of the postgraduate research scholarship at the Atlantic Technological University, Ireland.</li>
-<li>One of the 10 winners of the Samson Abioye Essay Writing Scholarship in 2018 - Nigeria</li>
-<li>A recipient of the Abdulkabir Aliu Foundation Scholarship for undergraduate students - Nigeria</li>
-</ol>
+  <h5 className='p-2'>Skills</h5>
+  <h6>Programming</h6>
+    <div className='chart-container shadow p-3 mb-5 bg-body rounded'>
+ 
+       <div className='chart'>
 
-</div>
+        {/* @ts-ignore */}
+        <ResponsiveChartContainer 
+
+        sx={{}}
+          series={[
+            {
+              type: 'bar',
+              data: [40,38,98,92,55,95,65,75],
+            },
+            
+          ]}
+          xAxis={[
+            {
+              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL','MongoDB'],
+              scaleType: 'band',
+              id: 'x-axis-id',
+            },
+          ]}
+
+          yAxis={[
+            { id: 'yAxis',scaleType: 'linear' },
+            
+          ]}
+      
+        >
+          <BarPlot />
+        
+          <MarkPlot />
+          <ChartsXAxis label="Languages" position="bottom" axisId="x-axis-id" />
+          <ChartsYAxis label="Proficiency Level" position="left" axisId="yAxis" />
+        </ResponsiveChartContainer >
+      </div>
+ 
 
 
-<div>
-<div className='text-white d-flex'>
-    <h5 className='p-2' style={{background:'#383913'}}>Research Areas</h5>
-    <FiCornerRightDown size={30} color='white'/>
-    </div>
+<div className='chart'>
+        {/* @ts-ignore */}
+        <ResponsiveChartContainer 
+          series={[
+            {
+              type: 'bar',
+              data: [96, 84, 72,60,84, 72,72,12],
+            },
+            
+          ]}
+          xAxis={[
+            {
+              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL','MongoDB'],
+              scaleType: 'band',
+              id: 'x-axis-id',
+            },
+          ]}
 
-<ol>
-<li>Network traffic modeling using graph neural networks</li>
+          yAxis={[
+            { id: 'yAxis',scaleType: 'linear' },
+            
+          ]}
+      
+        >
+          <BarPlot />
+        
+          <MarkPlot />
+          <ChartsXAxis label="Languages" position="bottom" axisId="x-axis-id" />
+          <ChartsYAxis label="Months" position="left" axisId="yAxis" />
+        </ResponsiveChartContainer >
+      </div>
+
+
+      </div>
+
+    <h5>Machine Learning Research Areas</h5>  
+
+    <ol>
+<li>Deep learning for malware detection</li>
 <li>Deep reinforcement learning</li>
-<li>Network sparsification</li>
-<li>Real-time threat detection</li>
+<li>Malware behavior modeling using graph neural networks</li>
+<li>Model compressions including network pruning and graph sparsifications</li>
 </ol>
-
-</div>
-
-
   </div>
 
 
+  <h5 className='p-2 bg-danger text-light'>Recent Activities</h5>
     
+   
+   
+  <div className='activities'>
+
+<div>
+  <Link to='/activity/1'>
+<img src={aics1}/>
+<h6>31st Irish Conference on Artificial Intelligence and Cognitive Science</h6>
+</Link>
+</div>
+
+<div>
+<Link to='/activity/2'>
+<img src={ernact2}/>
+<h6>Unlocking the Power of AI for Public Service Protection in Cyber Space</h6>
+</Link>
+</div>
+
+<div>
+  <Link to='/activity/3' >
+<img src={nfv}/>
+<h6>Navigating the Future of Network Security: Insights from the 2023 IEEE NFV-SDN Conference</h6>
+</Link>
+</div>
+
+</div>
+
+   
+
     </div>
   )
 }

@@ -12,8 +12,8 @@ const {screenWidth,showMenuContainer,handleMenuContainer,headerColor}= useGlobal
 if (screenWidth <=446){
    
     console.log(headerColor)
-    return <header style={{background:headerColor}}> 
-    <div className='sub-header' style={{background:headerColor}}>
+    return <header > 
+    <div className='sub-header' >
 
     <div className='menu-title'>
        <h5>Saheed Kazeem</h5>

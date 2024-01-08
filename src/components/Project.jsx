@@ -4,16 +4,17 @@ import eCommerce_mobile from '../images/eCommerce_mobile.jpg'
 import chatApp1 from '../images/chat app dashboard.png'
 import mealApp from '../images/meal app.png'
 
-const Project = () => {
+const Web= () => {
   return (
     <div className='project-section'>
-       <h5>Recent Web App Projects</h5>
+      
    
     <div className='project-container'>
-    
+  
     <div className='project-image'>
-   
+    
     <div className='description'>
+    <h4>Recent Projects</h4>
     <h5><a href='https://main--tangerine-daifuku-6d1d18.netlify.app/'>An E-Commerce Web Application</a></h5>
     <img src={eCommerce_desktop} className='image-size'/>
       <h6>Features' description</h6>  
@@ -83,25 +84,9 @@ const Project = () => {
     </div>
     </div>
 
-<hr></hr>
-    <h5>Recent Machine Learning Projects</h5>
-    <ul>
-        <li>Heterogeneous graph reinforcement learning framework for APT detection in wireless networks</li>
-        <li>Credit card default prediction using logistic regression</li>
-    </ul>
-
-    <hr></hr>
-    <h5>Recent Embedded Systems Projects</h5>
-    <ul>
-        <li>Digital walking stick for the visually impaired</li>
-        <li>A fire alarm detection system using Arduino microcontroller</li>
-    </ul>
-   
-    
 
     </div>
   )
 }
 
-export default Project
-
+export default Web
