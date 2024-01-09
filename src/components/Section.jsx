@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import profile from '../images/profile2.jpg'
+import profile2 from '../images/profile3.jpg'
 import ml from '../images/ML.png'
 import web from '../images/web.png'
 import aics1 from '../images/aics1.jpg'
