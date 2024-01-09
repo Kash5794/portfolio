@@ -50,13 +50,13 @@ setInterval(()=>{
     <div className='image-container'>
         
     <img src={image} alt='profile'/>
+    
+    <h6>B.Eng, MSc</h6>
+    </div>
     <div >
-    <h4  style={{fontSize:'20px'}}>Software Engineer/AI Researcher</h4>
-    
+    <h6  >Software Engineer/AI Researcher</h6>
     </div>
-    
-    </div>
-
+<hr></hr>
   <div className='introduction'>
   
     <h5 className='p-2'>Projects</h5>
@@ -101,7 +101,7 @@ setInterval(()=>{
           ]}
           xAxis={[
             {
-              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL'],
+              data: ['C', 'C++', 'HTML', 'JS', 'Java','Py','SQL'],
               scaleType: 'band',
               id: 'x-axis-id',
             },
@@ -138,7 +138,7 @@ setInterval(()=>{
           ]}
           xAxis={[
             {
-              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL'],
+              data: ['C', 'C++', 'HTML', 'JS', 'Java','Py','SQL'],
               scaleType: 'band',
               id: 'x-axis-id',
             },

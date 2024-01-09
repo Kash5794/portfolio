@@ -242,15 +242,14 @@ border: 0.5px solid white;
   flex-wrap: wrap;
   align-items: center;
   color: dark;
-  margin-bottom: 50px;
-
+ 
 }
 .image-container img{
   border-left:3px solid #01214b;
   border-right:3px solid#01214b;
   width: 150px;
   border-radius: 30%;
- 
+  margin-right: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 10px;
 }
