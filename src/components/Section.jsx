@@ -154,14 +154,14 @@ setInterval(()=>{
         
           <MarkPlot />
           <ChartsXAxis label="Languages" position="bottom" axisId="x-axis-id" />
-          <ChartsYAxis label="Months" position="left" axisId="yAxis" />
+          <ChartsYAxis label="Experience in months" position="left" axisId="yAxis" />
         </ResponsiveChartContainer >
       </div>
 
 
       </div>
 
-    <h5>Machine Learning Research Areas</h5>  
+    <h5>Research Areas</h5>  
 
     <ol>
 <li>Deep learning for malware detection</li>
