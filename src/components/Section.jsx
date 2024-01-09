@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import image from '../images/profile.jpg'
+import profile from '../images/profile2.jpg'
 import ml from '../images/ML.png'
 import web from '../images/web.png'
 import aics1 from '../images/aics1.jpg'
+import aics2 from '../images/aics2.jpg'
 import ernact from '../images/ernact.jpg'
 import ernact2 from '../images/ernact2.jpg'
 import nfv from '../images/nfv.png'
@@ -49,7 +50,7 @@ setInterval(()=>{
 
     <div className='image-container'>
         
-    <img src={image} alt='profile'/>
+    <img src={profile} alt='profile'/>
     
     <h6>B.Eng, MSc</h6>
     </div>
