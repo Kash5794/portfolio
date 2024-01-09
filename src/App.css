@@ -298,7 +298,8 @@ overflow: hidden;
 width: 50%;
 height: 300px;
 max-width: 600px;
-min-width: 400px;
+min-width: 340px;
+margin: 0;
 }
 
 .activities{
@@ -411,10 +412,10 @@ margin-top: 20px;
 .technology-stack-image-container{
   width: 100%;
 }
-
 .chart{
   width: 100%;
 }
+
 }
 
 /*Projects*/

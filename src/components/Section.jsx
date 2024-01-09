@@ -90,17 +90,18 @@ setInterval(()=>{
         {/* @ts-ignore */}
         <ResponsiveChartContainer 
 
-        sx={{}}
+        sx={{margin:'0px',padding:'0px'}}
           series={[
             {
               type: 'bar',
-              data: [40,38,98,92,55,95,65,75],
+              data: [40,38,98,92,55,95,65],
+              color: 'darkblue'
             },
             
           ]}
           xAxis={[
             {
-              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL','MongoDB'],
+              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL'],
               scaleType: 'band',
               id: 'x-axis-id',
             },
@@ -125,16 +126,19 @@ setInterval(()=>{
 <div className='chart'>
         {/* @ts-ignore */}
         <ResponsiveChartContainer 
+         sx={{margin:'0px',padding:'0px'}}
           series={[
             {
               type: 'bar',
-              data: [96, 84, 72,60,84, 72,72,12],
+              data: [96, 84, 72,60,84, 72,72],
+              color: 'red'
+
             },
             
           ]}
           xAxis={[
             {
-              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL','MongoDB'],
+              data: ['C', 'C++', 'HTML', 'JS', 'Java','Python','SQL'],
               scaleType: 'band',
               id: 'x-axis-id',
             },
@@ -144,7 +148,7 @@ setInterval(()=>{
             { id: 'yAxis',scaleType: 'linear' },
             
           ]}
-      
+          
         >
           <BarPlot />
         
