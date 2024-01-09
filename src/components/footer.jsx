@@ -5,7 +5,7 @@ const Footer = () => {
     <main className='d-flex footer-container justify-content-center text-center'>
         
         <div>
-<p>Location: Letterkenny, Ireland</p>
+<p>Location: Dublin, Ireland</p>
 <p>Email address: kazeemsaheed49@gmail.com</p>
         </div>
         

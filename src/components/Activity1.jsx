@@ -31,11 +31,6 @@ const Activity1 = () => {
     Given the escalating threats in the cybersecurity landscape, my presentation delved into the evolving challenges posed by Advanced Persistent Threats (APTs). 
     Recent cyberattacks have transitioned from causing mere financial losses or service disruptions to stealthily extracting confidential data. APTs, characterized by dynamic and sophisticated attack mechanisms, have emerged as a significant challenge.
     </p>
-    
-    <p>
-    Given the escalating threats in the cybersecurity landscape, my presentation delved into the evolving challenges posed by APTs. 
-    Recent cyberattacks have transitioned from causing mere financial losses or service disruptions to stealthily extracting confidential data. APTs, characterized by dynamic and sophisticated attack mechanisms, have emerged as a significant challenge.
-    </p>
 
     <p>
     As a dedicated researcher focused on pioneering solutions for cyber attack detection, I presented a groundbreaking Deep Reinforcement Learning approach tailored for APT detection. 
