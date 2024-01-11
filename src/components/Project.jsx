@@ -3,18 +3,41 @@ import eCommerce_desktop from '../images/eCommerce_desktop.jpg'
 import eCommerce_mobile from '../images/eCommerce_mobile.jpg'
 import chatApp1 from '../images/chat app dashboard.png'
 import mealApp from '../images/meal app.png'
+import todo from '../images/todo.png'
+
 
 const Web= () => {
   return (
     <div className='project-section'>
       
-   
+      <div className='project-container'>
+  
+  <div className='project-image'>
+  
+  <div className='description'>
+  <h4>Recent Projects</h4>
+  <h5><a href='https://master--dapper-platypus-e18bbe.netlify.app/'>A Todo App</a></h5>
+  <img src={todo} className='image-size'/>
+    <h6>Features' description</h6>  
+    <ul>
+  <li>Create and add a new task to the todo list</li>
+  <li>Complete a task</li>
+  <li>View all completed tasks</li>
+  <li>View all tasks to be completed</li>
+    </ul>
+  </div>
+  </div>
+ 
+  </div>
+
+  <hr></hr>
+
     <div className='project-container'>
   
     <div className='project-image'>
     
     <div className='description'>
-    <h4>Recent Projects</h4>
+
     <h5><a href='https://main--tangerine-daifuku-6d1d18.netlify.app/'>An E-Commerce Web Application</a></h5>
     <img src={eCommerce_desktop} className='image-size'/>
       <h6>Features' description</h6>  

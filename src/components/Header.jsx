@@ -12,7 +12,7 @@ const {screenWidth,showMenuContainer,handleMenuContainer,headerColor}= useGlobal
 if (screenWidth <=446){
    
     console.log(headerColor)
-    return <header > 
+    return <header style={{height:headerColor?'220px':'60px'}}> 
     <div className='sub-header' >
 
     <div className='menu-title'>
@@ -21,10 +21,10 @@ if (screenWidth <=446){
 <FcMenu size={30} color='white' onClick={handleMenuContainer} style={{cursor:'pointer'}} />
     </div>
    {showMenuContainer && <div className='menu-container-block'>
-   <div><Link style={{color:'white'}} to='/'> Home </Link> </div>
-    <div><Link style={{color:'white'}} to={CV} download='KazeemSaheedCV' target="_blank" rel="noreferrer">Resume</Link></div>
-    <div><a href='https://linkedin.com/in/i-am-kazeem-saheed' target='_blank'>Linkedln</a></div>
-    <div><a href='https://github.com/Kash5794' target='_blank'>Github</a></div>
+   <div><Link style={{color:'white'}} to='/'> Home </Link> </div><hr></hr>
+    <div><Link style={{color:'white'}} to={CV} download='KazeemSaheedCV' target="_blank" rel="noreferrer">Resume</Link></div><hr></hr>
+    <div><a href='https://linkedin.com/in/i-am-kazeem-saheed' target='_blank'>Linkedln</a></div><hr></hr>
+    <div><a href='https://github.com/Kash5794' target='_blank'>Github</a></div><hr></hr>
     <div>About</div>
     </div>}
    

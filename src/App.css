@@ -164,9 +164,12 @@ background-color: rgb(44, 14, 62);
 /*Header Component*/
 header{
   padding: 1rem;
-  background:rgba(17, 4, 4, 0.886);
+  background-color:rgba(17, 4, 4, 0.886);
   width: 100%;
+
   top: 0;
+  transition:  height 1s;
+
 }
 
 .sub-header{
@@ -175,6 +178,7 @@ header{
   justify-content:space-between;
   color:var(--white);
   gap: 0.5rem;
+  
 }
 
 .menu-title{
@@ -199,6 +203,9 @@ header{
 .menu-container-block{
   color: white;
   transition: var(--transition);
+}
+.menu-container-block hr{
+margin: 5px;
 }
 
 .menu-container-block div{
