@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import profile from '../images/profile2.jpg'
+import profile from '../images/AICS1.png'
 import profile2 from '../images/profile3.jpg'
 import ml from '../images/ML.png'
 import web from '../images/web.png'
@@ -16,7 +16,7 @@ import {FiCornerRightDown} from 'react-icons/fi'
 import {ImPointRight} from 'react-icons/im'
 import { BarChart } from '@mui/x-charts/BarChart';
 import { BarPlot } from '@mui/x-charts/BarChart';
-
+import { AiFillCaretRight } from "react-icons/ai";
 
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
@@ -52,134 +52,38 @@ setInterval(()=>{
     <div className='image-container'>
         
     <img src={profile} alt='profile'/>
-    
-    <h6>B.Eng, MSc</h6>
+    <div>
+<h2>Software Engineer</h2>
+<h5 style={{color:'blue'}}>Build Responsive Website</h5>
+<h6 style={{color:'darkblue'}}>Also Build, Train & Deploy Machine Learning Models</h6>
     </div>
-    <div >
-    <h6  >Software Engineer/AI Researcher</h6>
+    
+    </div>
+    <div className='d-flex justify-content-center gap-5' >
+    <button type="button" class="btn btn-primary " ><a href='#scroll-project'>My Projects</a></button>
+<button type="button" class="btn btn-secondary"><a href='#scroll-contact'>Contact Me</a></button>
     </div>
 <hr></hr>
-  <div className='introduction'>
+<h4 style={{marginTop:'100px'}}>Tech-Stack</h4>
+<div className='tech-stack'>
+
+<AiFillCaretRight size={100} />
+
+<ul>
+  <li>Frontend: ReactJS, HTML,CSS, Bootstrap</li>
+  <li>Backend: NodeJS, Python</li>
+  <li>Machine Learning: Tensorflow, Pytorch, Keras</li>
+  <li>Database: MySQL,MongoDB,Postgresql</li>
+  <li>Cloud Technology: AWS, Azure</li>
   
-    <h5 className='p-2'>Projects</h5>
-   
+</ul>
+</div>
 
-  <div className='technology-stack-container'>
-  <Link to='/machine'>
-     
-    <div className='technology-stack-image-container'><img src={ml} alt='machine learning'/>
-    <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}} >
+<hr></hr>
     
-      <h5>Machine Learning</h5>
-      </div>
-    </div>
-    </Link>
-    <Link  to='/web'>
-    <div className='technology-stack-image-container'><img src={web} alt='web development'/>
-    <div style={{width:'100%',display:'flex',justifyContent:'center',alignItems:'center'}} >
-    <h5>Web Development</h5>
-    </div>
-    </div>
-    </Link>
-  </div>
-
-  <h5 className='p-2'>Skills</h5>
-  <h6>Programming</h6>
-    <div className='chart-container shadow p-3 mb-5 bg-body rounded'>
- 
-       <div className='chart'>
-
-        {/* @ts-ignore */}
-        <ResponsiveChartContainer 
-
-        sx={{margin:'0px',padding:'0px'}}
-          series={[
-            {
-              type: 'bar',
-              data: [40,38,98,92,55,95,65],
-              color: 'darkblue'
-            },
-            
-          ]}
-          xAxis={[
-            {
-              data: ['C', 'C++', 'HTML', 'JS', 'Java','Py','SQL'],
-              scaleType: 'band',
-              id: 'x-axis-id',
-            },
-          ]}
-
-          yAxis={[
-            { id: 'yAxis',scaleType: 'linear' },
-            
-          ]}
-      
-        >
-          <BarPlot />
-        
-          <MarkPlot />
-          <ChartsXAxis label="Languages" position="bottom" axisId="x-axis-id" />
-          <ChartsYAxis label="Proficiency Level" position="left" axisId="yAxis" />
-        </ResponsiveChartContainer >
-      </div>
- 
-
-
-<div className='chart'>
-        {/* @ts-ignore */}
-        <ResponsiveChartContainer 
-         sx={{margin:'0px',padding:'0px'}}
-          series={[
-            {
-              type: 'bar',
-              data: [96, 84, 72,60,84, 72,72],
-              color: 'red'
-
-            },
-            
-          ]}
-          xAxis={[
-            {
-              data: ['C', 'C++', 'HTML', 'JS', 'Java','Py','SQL'],
-              scaleType: 'band',
-              id: 'x-axis-id',
-            },
-          ]}
-
-          yAxis={[
-            { id: 'yAxis',scaleType: 'linear' },
-            
-          ]}
-          
-        >
-          <BarPlot />
-        
-          <MarkPlot />
-          <ChartsXAxis label="Languages" position="bottom" axisId="x-axis-id" />
-          <ChartsYAxis label="Experience in months" position="left" axisId="yAxis" />
-        </ResponsiveChartContainer >
-      </div>
-
-
-      </div>
-
-    <h5>Research Areas</h5>  
-
-    <ol>
-<li>Deep learning for malware detection</li>
-<li>Deep reinforcement learning</li>
-<li>Malware behavior modeling using graph neural networks</li>
-<li>Model compressions including network pruning and graph sparsifications</li>
-</ol>
-  </div>
-
-
-  <h5 className='p-2 bg-danger text-light'>Recent Activities</h5>
-    
-   
-   
+<h4 >Tech Meetup & Conferences</h4>
   <div className='activities'>
-
+  
 <div>
   <Link to='/activity/1'>
 <img src={aics1}/>
@@ -202,6 +106,39 @@ setInterval(()=>{
 </div>
 
 </div>
+
+
+
+<hr></hr>
+
+  <div className='introduction' id="scroll-project">
+  
+    <h5 className='p-2'>Projects</h5>
+   
+
+  <div className='technology-stack-container'>
+  <Link to='/machine'>
+     
+    <div className='technology-stack-image-container'>
+      <img src={ml} alt='machine learning'/>
+    <div className='ML-title'><h5>Machine Learning</h5></div>
+    </div>
+    </Link>
+
+    <Link  to='/web'>
+    <div className='technology-stack-image-container'>
+      <img src={web} alt='web development'/>
+   <div className='web-title'><h5>Web</h5></div>
+    </div>
+    </Link>
+  </div>
+
+
+    
+  </div>
+
+
+  
 
    
 

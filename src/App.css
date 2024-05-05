@@ -156,6 +156,10 @@ background-color: rgb(44, 14, 62);
 .btn-block {
   width: 100%;
 }
+button a{
+  text-decoration: none;
+  color: white;
+}
 /* End Of Global Styles */
 /* End Of Global Styles */
 /* End Of Global Styles */
@@ -164,26 +168,27 @@ background-color: rgb(44, 14, 62);
 /*Header Component*/
 header{
   padding: 1rem;
-  background-color:rgba(17, 4, 4, 0.886);
+  background-color:white;
   width: 100%;
-
+  color: #06415B;
   top: 0;
   transition:  height 1s;
-
+  font-weight: bold;
+  position: sticky;
 }
 
 .sub-header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  color:var(--white);
   gap: 0.5rem;
+  padding: 10px;
   
 }
 
 .menu-title{
-  font-weight: bold;
- color: white;
+font-weight: bold;
+ color: blue;
 }
 
 .menu-container{ 
@@ -192,16 +197,23 @@ header{
   display:flex;
   gap:1rem;
   flex-wrap:wrap;
-  justify-content: center;
+  justify-content:center;
   transition: var(--transition);
+  color: #06415B;
 }
 
 .menu-container div{
   cursor: pointer;
+  
+  padding: 10px;
+  
+}
+.menu-container div a{
+  color: #06415B;
 }
 
 .menu-container-block{
-  color: white;
+  color: #06415B;
   transition: var(--transition);
 }
 .menu-container-block hr{
@@ -238,7 +250,7 @@ border: 0.5px solid white;
   padding:1.5rem;
   color: dark;
  margin-top: 100px;
- position: static;
+ 
 
 
 }
@@ -249,6 +261,7 @@ border: 0.5px solid white;
   flex-wrap: wrap;
   align-items: center;
   color: dark;
+
  
 }
 .image-container img{
@@ -257,9 +270,9 @@ border: 0.5px solid white;
    
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
  
-  width: 200px;
-  height: 180px;
-  border-radius: 50%;
+  width: 350px;
+  height: 250px;
+  border-radius: 50px;
   margin-right: 10px;
  
   margin-bottom: 10px;
@@ -273,30 +286,44 @@ border: 0.5px solid white;
   flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 50px;
+  width: 100%;
+
+ 
 
 }
-.technology-stack-image-container{
-  width: 500px;
-  height: 300px;
-  
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding: 0;
-background-color: red;
-position:relative
+.technology-stack-container a{
+  text-decoration: none;
 }
+
+.technology-stack-image-container{
+ 
+  min-width: 200px;
+  width: 500px;
+ 
+  padding: 10px;
+  background-color: white;
+  box-shadow: 19px 17px 15px -3px rgba(0,0,0,0.1);
+}
+
+
 .technology-stack-container img{
  width: 100%;
  height: 100%;
  margin: 0;
+}
 
+.ML-title{
+  background-color:white;
+  padding: 10px;
+  text-align: center;
 }
-.technology-stack-image-container div{
-  position:absolute;
-  top: 50%;
+
+.web-title{
   background-color: white;
-  padding: 5px;
+  padding: 10px;
+  text-align: center;
 }
+
 .chart-container{
 display: flex;
 flex-wrap: wrap;
@@ -316,10 +343,13 @@ margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+ 
+ 
 }
 .activities img{
   width: 350px;
   height: 300px;
+  
   
 }
 .activities div{
@@ -362,12 +392,12 @@ width: 350px;
 }
 
 .introduction{
-  margin-top: 20px;
+  margin-top: 80px;
   text-align: justify;
-  margin-bottom: 80px;
+  margin-bottom: 80px;  
+  
 
 }
-
 
 .button-container{
   display: flex;
@@ -387,6 +417,10 @@ button:nth-child(1){
     width: 100%;
     padding: 0.5rem;
    
+  }
+  .image-container img{
+    width: 230px;
+    height: 180px;
   }
 .font-size p{
   font-size: 15px;
@@ -428,11 +462,28 @@ margin-top: 20px;
 
 }
 
+/*Tech Stack*/
+
+.tech-stack{
+  background-color: rgb(3, 3, 37);
+  width: 100%;
+  padding: 5px;
+  color: white;
+  font-size: 18px;
+  margin-bottom: 50px;
+  display: flex;
+ 
+}
+
+.tech-stack ul li{
+  margin: 10px;
+}
 /*Projects*/
 .project-section{
   margin-top: 100px;
   color: dark;
   padding: 5px;
+  
 }
 .project-section ul{
   list-style-type: square;
@@ -468,14 +519,15 @@ margin-top: 20px;
   padding: 0.5rem;
   color: dark;
   margin-bottom: 20px; 
+  
 }
 
 header a{
   text-decoration: none;
-  color: white;
+  color: #06415B;
 }
 header a:visited{
-  color: white;
+  color: #06415B;
 }
 
 .project-container h5{
@@ -612,8 +664,8 @@ input[type=submit]{
 
 /**/
 .footer-container{
-  background-color: rgba(17, 4, 4, 0.886);
-  padding: 5px;
+  background-color:rgb(3, 3, 37);
+  padding: 20px;
   color: white;
   margin-bottom: 0;
   width: 100%;
