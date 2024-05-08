@@ -6,7 +6,7 @@ const AppProvider = ({children})=> {
 const [showMenuContainer, setMenuContainer] = useState(false)
 const [headerColor,setHeaderColor]= useState(null)
 const[showMessagePane, setMessagePane] = useState(false)
-
+const [bodyColor, setBodyColor] = useState(false)
 
 const[messageSent, setMessageSent] = useState(false)
 
@@ -54,7 +54,7 @@ window.addEventListener('resize', updateScreenWidth)
 
 
   return (
-   <AppContext.Provider value={{setMessageSent,messageSent,screenWidth, handleMenuContainer, showMenuContainer,headerColor,handleContactClick,showMessagePane}}>
+   <AppContext.Provider value={{setMessageSent,messageSent,screenWidth, handleMenuContainer, showMenuContainer,headerColor,handleContactClick,showMessagePane,bodyColor,setBodyColor}}>
             {children}
    </AppContext.Provider>
   )

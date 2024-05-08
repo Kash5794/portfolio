@@ -16,6 +16,9 @@ const Machine= () => {
     <div className='description'>
     <h4>Recent Projects</h4>
     <h5><a href='https://doi.org/10.1109/NFV-SDN59219.2023.10329745'>Heterogeneous Graph Transformer for Advanced Persistent Threat Classification in Wireless Networks</a></h5>
+    
+    
+    
     <img src={HGT} className='image-size'/>
     
     </div>

@@ -17,6 +17,7 @@ import {ImPointRight} from 'react-icons/im'
 import { BarChart } from '@mui/x-charts/BarChart';
 import { BarPlot } from '@mui/x-charts/BarChart';
 import { AiFillCaretRight } from "react-icons/ai";
+import { MdDarkMode } from "react-icons/md";
 
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
@@ -30,62 +31,69 @@ import { ChartsXAxis } from '@mui/x-charts/ChartsXAxis';
 import { ChartsYAxis } from '@mui/x-charts/ChartsYAxis';
 
 const Section = () => {
-  const {handleContactClick}= useGlobalContext()
+  const {handleContactClick,bodyColor,setBodyColor}= useGlobalContext()
 
-const [hand, setHand] = useState(false)
+const [togglerColor, setTogglerColor] = useState('black')
 
-useEffect(()=>{
 
-setInterval(()=>{
-  if(hand){
-    setHand(false)
+const setToggleMode= ()=>{
+
+  if (bodyColor){
+    setBodyColor(false)
+    setTogglerColor('black')
   }
+
   else{
-    setHand(true)
+    setBodyColor(true)
+    setTogglerColor('white')
   }
-  },1000)
-},[])
+}
+
+
+
 
   return (
-    <div className='section'>
+    <div className='section-parent' style={{backgroundColor:bodyColor?'#191919':'white'}}>
 
-    <div className='image-container'>
-        
-    <img src={profile} alt='profile'/>
-    <div>
-<h2>Software Engineer</h2>
-<h5 style={{color:'blue'}}>Build Responsive Website</h5>
-<h6 style={{color:'darkblue'}}>Also Build, Train & Deploy Machine Learning Models</h6>
-    </div>
+<div className='section'>
+
+<div className='image-container'>
     
-    </div>
-    <div className='d-flex justify-content-center gap-5' >
-    <button type="button" class="btn btn-primary " ><a href='#scroll-project'>My Projects</a></button>
-<button type="button" class="btn btn-secondary"><a href='#scroll-contact'>Contact Me</a></button>
-    </div>
+<img src={profile} alt='profile'/>
+<div >
+<h2 style={{color:bodyColor?'white':''}}>Software Engineer</h2>
+<h5 style={{color:bodyColor?'white':'blue'}}>Researches, Builds, & Deploys Machine Learning Solutions</h5>
+<h6 style={{color:bodyColor?'white':'darkblue'}}>Also adept at developing responsive websites</h6>
+</div>
+
+</div>
+<div className='d-flex justify-content-center gap-5' >
+<button type="button" className="btn btn-primary " ><a href='#scroll-project'>My Projects</a></button>
+<button type="button" className="btn btn-secondary"><a href='#scroll-contact'>Contact Me</a></button>
+</div>
 <hr></hr>
-<h4 style={{marginTop:'100px'}}>Tech-Stack</h4>
+<h4 style={{marginTop:'100px',color:bodyColor?'white':''}}>Tech-Stack</h4>
 <div className='tech-stack'>
 
 <AiFillCaretRight size={100} />
 
 <ul>
-  <li>Frontend: ReactJS, HTML,CSS, Bootstrap</li>
-  <li>Backend: NodeJS, Python</li>
-  <li>Machine Learning: Tensorflow, Pytorch, Keras</li>
-  <li>Database: MySQL,MongoDB,Postgresql</li>
-  <li>Cloud Technology: AWS, Azure</li>
-  
+<li>Frontend: ReactJS, HTML,CSS, Bootstrap</li>
+<li>Backend: NodeJS, Python</li>
+<li>Machine Learning: Tensorflow, Pytorch, Keras</li>
+<li>Database: MySQL,MongoDB,Postgresql</li>
+<li>Cloud Technology: AWS, Azure</li>
+
 </ul>
 </div>
 
 <hr></hr>
-    
-<h4 >Tech Meetup & Conferences</h4>
-  <div className='activities'>
-  
+
+<h4 style={{color:bodyColor?'white':''}}>Tech Meetup & Conferences</h4>
+<div className='activities'>
+
 <div>
-  <Link to='/activity/1'>
+<Link to='/activity/1'>
 <img src={aics1}/>
 <h6>31st Irish Conference on Artificial Intelligence and Cognitive Science</h6>
 </Link>
@@ -99,7 +107,7 @@ setInterval(()=>{
 </div>
 
 <div>
-  <Link to='/activity/3' >
+<Link to='/activity/3' >
 <img src={nfv}/>
 <h6>Navigating the Future of Network Security: Insights from the 2023 IEEE NFV-SDN Conference</h6>
 </Link>
@@ -111,38 +119,52 @@ setInterval(()=>{
 
 <hr></hr>
 
-  <div className='introduction' id="scroll-project">
-  
-    <h5 className='p-2'>Projects</h5>
+<div className='introduction' id="scroll-project">
+
+<h4 className='p-2' style={{color:bodyColor?'white':''}}>Projects</h4>
+
+
+<div className='technology-stack-container'>
+<Link to='/machine'>
+ 
+<div className='technology-stack-image-container'>
+  <img src={ml} alt='machine learning'/>
+<div className='ML-title'><h5>Machine Learning</h5></div>
+</div>
+</Link>
+
+<Link  to='/web'>
+<div className='technology-stack-image-container'>
+  <img src={web} alt='web development'/>
+<div className='web-title'><h5>Web</h5></div>
+</div>
+</Link>
+</div>
+
+
+
+</div>
+
+
+<div className='dark-mode' onClick={setToggleMode}>
+<MdDarkMode size={30} color={togglerColor}/>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
    
-
-  <div className='technology-stack-container'>
-  <Link to='/machine'>
-     
-    <div className='technology-stack-image-container'>
-      <img src={ml} alt='machine learning'/>
-    <div className='ML-title'><h5>Machine Learning</h5></div>
-    </div>
-    </Link>
-
-    <Link  to='/web'>
-    <div className='technology-stack-image-container'>
-      <img src={web} alt='web development'/>
-   <div className='web-title'><h5>Web</h5></div>
-    </div>
-    </Link>
-  </div>
-
-
-    
-  </div>
-
-
-  
-
-   
-
-    </div>
   )
 }
 
