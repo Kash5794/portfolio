@@ -258,7 +258,7 @@ border: 0.5px solid white;
 }
 .dark-mode{
   position:fixed;
-  bottom:150px;
+  top:100px;
   right:10px;
   border:1px solid black;
   cursor:pointer
