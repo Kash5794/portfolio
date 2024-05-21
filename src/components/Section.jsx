@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import profile from '../images/AICS1.png'
 import profile2 from '../images/profile3.jpg'
 import ml from '../images/ML.png'
-import web from '../images/web.png'
+import web from '../images/web2.png'
 import aics1 from '../images/aics1.jpg'
 import aics2 from '../images/aics2.jpg'
 import ernact from '../images/ernact.jpg'
@@ -127,16 +127,16 @@ const setToggleMode= ()=>{
 <div className='technology-stack-container'>
 <Link to='/machine'>
  
-<div className='technology-stack-image-container'>
+<div className='technology-stack-image-container' style={{backgroundColor:bodyColor?'#191919':'white'}}>
   <img src={ml} alt='machine learning'/>
-<div className='ML-title'><h5>Machine Learning</h5></div>
+<div className='ML-title' style={{backgroundColor:bodyColor?'#191919':'white'}}><h5>Machine Learning</h5></div>
 </div>
 </Link>
 
 <Link  to='/web'>
-<div className='technology-stack-image-container'>
+<div className='technology-stack-image-container' style={{backgroundColor:bodyColor?'#191919':'white'}}>
   <img src={web} alt='web development'/>
-<div className='web-title'><h5>Web</h5></div>
+<div className='web-title'style={{backgroundColor:bodyColor?'#191919':'white'}}><h5>Web Dev</h5></div>
 </div>
 </Link>
 </div>
